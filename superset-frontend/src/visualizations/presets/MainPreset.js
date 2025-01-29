@@ -69,6 +69,7 @@ import {
   BigNumberPeriodOverPeriodChartPlugin,
   EchartsHeatmapChartPlugin,
 } from '@superset-ui/plugin-chart-echarts';
+import ShadowDOMChartPlugin from '@superset-ui/plugin-shadow-dom-chart';
 import {
   SelectFilterPlugin,
   RangeFilterPlugin,
@@ -171,6 +172,8 @@ export default class MainPreset extends Preset {
         new EchartsSunburstChartPlugin().configure({ key: VizType.Sunburst }),
         new HandlebarsChartPlugin().configure({ key: VizType.Handlebars }),
         new EchartsBubbleChartPlugin().configure({ key: VizType.Bubble }),
+        new ShadowDOMChartPlugin().configure({ key: 'shado-dom-chart' }),
+        
         new CartodiagramPlugin({
           defaultLayers: [
             {
